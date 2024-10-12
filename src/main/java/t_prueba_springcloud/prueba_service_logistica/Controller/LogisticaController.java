@@ -24,4 +24,9 @@ public class LogisticaController {
     public String consultarDetalleEnvio() {
         return serviceDetalleClient.consultarDetalle();
     }
+
+    @GetMapping("/envios-orden")
+    public String consultarOrden() {
+        return serviceOrdenClient.consultarOrden();
+    }
 }
