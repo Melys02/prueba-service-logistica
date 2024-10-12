@@ -9,6 +9,8 @@ import t_prueba_springcloud.prueba_service_logistica.remoteservice.ServiceOrdenC
 @RequiredArgsConstructor
 @RestController
 public class LogisticaController {
+    private final ServiceDetalleClient serviceDetalleClient;
+    private final ServiceOrdenClient serviceOrdenClient;
     @GetMapping("/envios")
     public String consultarEnvios() {
         return "Obtener Respuesta Del servicio LOgistica - Envios";
@@ -18,5 +20,8 @@ public class LogisticaController {
         return "Obtener Respuesta Del servicio LOgistica - Clientes";
 
     }
-
+    @GetMapping("/envios-detalle")
+    public String consultarDetalleEnvio() {
+        return serviceDetalleClient.consultarDetalle();
+    }
 }
