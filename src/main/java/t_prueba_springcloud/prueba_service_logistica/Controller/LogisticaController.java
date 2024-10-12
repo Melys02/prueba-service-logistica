@@ -13,5 +13,10 @@ public class LogisticaController {
     public String consultarEnvios() {
         return "Obtener Respuesta Del servicio LOgistica - Envios";
     }
+    @GetMapping("/inventario")
+    public String consultarInventario() {
+        return "Obtener Respuesta Del servicio LOgistica - Clientes";
+
+    }
 
 }
